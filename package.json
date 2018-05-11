@@ -1,0 +1,46 @@
+{
+  "name": "carrusel-360",
+  "version": "1.0.0",
+  "description": "javascript carrusel 360",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack-dev-server",
+    "prod": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjhoncv/carrusel360.git"
+  },
+  "keywords": [
+    "carrusel",
+    "360",
+    "javascript",
+    "js",
+    "node"
+  ],
+  "author": "jhonnatan castro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jjhoncv/carrusel360/issues"
+  },
+  "homepage": "https://github.com/jjhoncv/carrusel360#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-syntax-async-functions": "^6.13.0",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-regenerator": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "eslint": "^4.19.1",
+    "eslint-config-und": "^0.0.2",
+    "eslint-loader": "^2.0.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "style-loader": "^0.21.0",
+    "webpack": "3.8.1",
+    "webpack-dev-server": "2.9.3"
+  }
+}

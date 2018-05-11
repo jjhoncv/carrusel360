@@ -1,0 +1,9 @@
+{
+    "parserOptions": {
+      "sourceType": "module"
+    },
+    "extends": "eslint-config-und",
+    "rules":{
+      "no-console": "off"
+    }
+  }
