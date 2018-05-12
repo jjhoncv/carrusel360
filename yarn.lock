@@ -1117,6 +1117,10 @@ caniuse-lite@^1.0.30000835:
   version "1.0.30000839"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000839.tgz#41fcc036cf1cb77a0e0be041210f77f1ced44a7b"
 
+carrusel-360@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/carrusel-360/-/carrusel-360-1.0.0.tgz#8b835e78f475a5c73cca54b331f4777923833104"
+
 center-align@^0.1.1:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/center-align/-/center-align-0.1.3.tgz#aa0d32629b6ee972200411cbd4461c907bc2b7ad"

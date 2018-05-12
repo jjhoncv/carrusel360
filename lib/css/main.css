@@ -1,0 +1,13 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.view-carrusel-item {
+  position: absolute;
+  border: 1px solid green;
+}
+.view-carrusel {
+  list-style-type: none;
+  overflow: hidden;
+  position: relative;
+}
