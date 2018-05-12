@@ -1,15 +1,50 @@
 import './css/main.css';
 
-import { equal } from 'assert';
+import { viewCarrusel } from './components/view-carrusel';
 
-const RenderList = `
-    <li><li>
-`;
+const Carrusel = (() => {
+  let st = {},
+    dom = {};
 
-const RenderUl = `
-    <ul>${RenderList}</ul>
-`;
+  st = {
+    app: '#app',
+    url: ''
+  };
 
-const Carrusel = function() {};
+  let catchDomApp = () => {
+    dom.app = document.querySelector(st.app);
+  };
+
+  let loadData = async () => {
+    return await fetch(st.url).then(res => res.json());
+  };
+
+  let render = data => {
+    dom.app.innerHTML = viewCarrusel(data);
+  };
+
+  let main = () => {
+    loadData().then(render);
+  };
+
+  let suscribeEvents = () => {};
+
+  let fn = {};
+
+  let events = {};
+
+  let initialize = oP => {
+    st = Object.assign({}, st, oP);
+    catchDomApp();
+    main();
+    suscribeEvents();
+  };
+
+  return {
+    init: initialize
+  };
+})();
+
+// Carrusel.init();
 
 export { Carrusel };
