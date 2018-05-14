@@ -1,6 +1,6 @@
 const settings = {
-  width: 800,
-  height: 300
+  width: 300,
+  height: 150
 };
 
 export { settings };
