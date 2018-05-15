@@ -4,21 +4,28 @@
   box-sizing: border-box;
 }
 
-.carrusel .slider {
-  list-style-type: none;
-  overflow: hidden;
+.carrusel {
   position: relative;
+  overflow: hidden;
+}
+
+.carrusel .slider {
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
 }
 
 .carrusel .slider > div {
-  position: absolute;
   border: 1px solid green;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
 }
 
 .carrusel .options {
   position: absolute;
   width: 100%;
-  height: 150px;
+  height: 100%;
   top: 0;
 }
 
