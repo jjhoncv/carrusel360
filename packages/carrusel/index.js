@@ -18,6 +18,7 @@ class Options extends Element {
   constructor() {
     super();
     this.ele = document.createElement('div');
+    this.pos = 0
     let attr = {
       class: 'options',
       style: {
@@ -32,7 +33,7 @@ class Options extends Element {
     next.setAttribute('class', 'next');
     next.textContent = 'Next >';
     next.addEventListener('click', () => {
-      events.dispatch('move', 1);
+      events.dispatch('move', this.pos++);
     });
     this.ele.appendChild(next);
   }
@@ -40,6 +41,9 @@ class Options extends Element {
     let prev = document.createElement('div');
     prev.setAttribute('class', 'prev');
     prev.textContent = '< Prev';
+    prev.addEventListener('click', () => {
+      events.dispatch('move', this.pos--);
+    });
     this.ele.appendChild(prev);
   }
   proccess() {
@@ -81,14 +85,17 @@ class Slider extends Element {
     events.register('move', this.move, this);
   }
 
-  move(i, self) {
-    let slides = self.components;
-    console.log('slides', slides);
-    slide.attr({
-      style: {
-        left: `${i * settings.width}px`
-      }
-    });
+  move(pos) {
+    this.components.map((slide, i) => {
+      let attr = {
+        class: i === pos ? 'item-slider current-slide' : 'item-slider',
+        style: {
+          left: `${i * settings.width - settings.width*pos}px`,
+        }
+      };
+
+      slide.attr(attr);
+    })
   }
 }
 
